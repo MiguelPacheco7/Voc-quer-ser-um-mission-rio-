@@ -1,16 +1,21 @@
-body {
-    margin: 0;
-    height: 100vh;
-    color: white;
+.fundo-missionario {
+    /* 1. O caminho para a sua imagem */
+    background-image: url('Assets/Pictures/Asset 5@4x(3).png');
 
-    /* Aqui combinamos duas camadas: */
-    background-image: 
-        /* Camada 1 (Topo): Os pontilhados */
-        radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-        
-        /* Camada 2 (Fundo): O degradê de cores (Do Azul para o Preto) */
-        linear-gradient(to bottom, #1a2a6c, #0d0d15);
+    /* 2. Faz a imagem cobrir toda a área sem sobrar espaços brancos */
+    background-size: contain;
 
-    /* Tamanho dos pontilhados (20px) e do degradê (tela toda) */
-    background-size: 20px 20px, 100% 100%;
+    /* 3. Centraliza a imagem (evita que corte o rosto de alguém, por exemplo) */
+    background-position: center;
+
+    /* 4. Faz com que a imagem não se repita como um papel de parede antigo */
+    
+
+    /* 5. Define a altura (100vh significa 100% da altura da tela visível) */
+    max-height: 100vh;
+    max-width: 100px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
