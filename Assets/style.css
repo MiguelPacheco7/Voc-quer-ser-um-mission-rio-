@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    height: 100vh;
+    color: white;
+
+    /* Aqui combinamos duas camadas: */
+    background-image: 
+        /* Camada 1 (Topo): Os pontilhados */
+        radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        
+        /* Camada 2 (Fundo): O degradê de cores (Do Azul para o Preto) */
+        linear-gradient(to bottom, #1a2a6c, #0d0d15);
+
+    /* Tamanho dos pontilhados (20px) e do degradê (tela toda) */
+    background-size: 20px 20px, 100% 100%;
+}
