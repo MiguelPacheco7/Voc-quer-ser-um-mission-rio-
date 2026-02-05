@@ -1,21 +1,7 @@
-.fundo-missionario {
-    /* 1. O caminho para a sua imagem */
-    background-image: url('Assets/Pictures/Asset 5@4x(3).png');
+@import "tailwindcss";
+@import "./tailwind.config.js";
 
-    /* 2. Faz a imagem cobrir toda a área sem sobrar espaços brancos */
-    background-size: contain;
 
-    /* 3. Centraliza a imagem (evita que corte o rosto de alguém, por exemplo) */
-    background-position: center;
-
-    /* 4. Faz com que a imagem não se repita como um papel de parede antigo */
-    
-
-    /* 5. Define a altura (100vh significa 100% da altura da tela visível) */
-    max-height: 100vh;
-    max-width: 100px;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+    background-color: black;
 }
