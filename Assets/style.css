@@ -4,4 +4,14 @@
 
 body {
     background-color: black;
+} 
+
+.bt-color {
+    color: white;
+    background-color: #5279dc;
+    transition: background-color 0.3s ease;
+}
+
+.bt-color:hover {
+  background-color: #4265be;
 }
