@@ -15,3 +15,127 @@ body {
 .bt-color:hover {
   background-color: #4265be;
 }
+
+
+/* === ESTILOS PARA O CARROSSEL 3D === */
+.carousel-3d-container {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    /* Adicionado padding para evitar corte nas sombras */
+    padding: 20px 0; 
+}
+
+.carousel-3d {
+    position: relative;
+    width: 100%;
+    /* Altura fixa é crucial para position absolute funcionar dentro */
+    height: 400px; 
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.carousel-3d-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.carousel-3d-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 70%; /* Levemente aumentado para destaque */
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #000; /* Fundo preto caso a imagem demore a carregar */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.6s ease;
+    
+    /* ESTADO INICIAL: Invisível e escondido */
+    opacity: 0;
+    transform: translateZ(-200px) scale(0.8);
+    pointer-events: none; /* Não clicável se não for o ativo */
+}
+
+.carousel-3d-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* === ESTADOS ATIVOS (Adicionados via JS) === */
+
+/* Slide Central (Ativo) */
+.carousel-3d-slide.active {
+    opacity: 1;
+    transform: translateZ(0) scale(1);
+    pointer-events: auto;
+    z-index: 10;
+}
+
+/* Slide Anterior (Esquerda) */
+.carousel-3d-slide.prev {
+    opacity: 0.6;
+    transform: translateX(-60%) translateZ(-150px) rotateY(15deg) scale(0.9);
+    z-index: 5;
+    pointer-events: none; /* Opcional: impede clique nos lados */
+}
+
+/* Slide Próximo (Direita) */
+.carousel-3d-slide.next {
+    opacity: 0.6;
+    transform: translateX(60%) translateZ(-150px) rotateY(-15deg) scale(0.9);
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* Botões de Navegação */
+.carousel-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 50; /* Z-index alto para ficar acima de tudo */
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    color: #000;
+}
+
+.carousel-nav-btn:hover {
+    background-color: #5279dc; /* Sua cor azul */
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+#prev-btn { left: -10px; }
+#next-btn { right: -10px; }
+
+/* Ajuste Mobile */
+@media (max-width: 767px) {
+    .carousel-3d {
+        height: 320px; /* Altura menor no mobile */
+    }
+    .carousel-3d-slide {
+        width: 75%;
+    }
+    .carousel-3d-slide.prev {
+        transform: translateX(-45%) translateZ(-100px) rotateY(10deg);
+    }
+    .carousel-3d-slide.next {
+        transform: translateX(45%) translateZ(-100px) rotateY(-10deg);
+    }
+}

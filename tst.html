@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="/Assets/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/png" href="/Assets/Pictures/Asset 54x(2).png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 </head>
 
 <body class="bg-black text-white">
@@ -64,21 +71,48 @@
             No CEAPE, os participantes são aperfeiçoados diariamente por meio do estudo da palavra profética, que
             funciona como luz e direção para o viver cristão, resultando em uma profunda transformação de vida.
         </p>
-        <div class="flex gap-2">
-            <div class="relative z-20 -mr-5">
-                <a href="https://www.instagram.com/ceapesetelagoas?igsh=bzRwcHUwdDcyNWdv" class="block">
-                    <img src="/Assets/Pictures/Asset 3@4x.png" class="rounded shadow-lg" alt="Estrutura">
-                </a>
-            </div>
-            <div class="relative z-30">
-                <a href="https://www.instagram.com/ceapesetelagoas?igsh=bzRwcHUwdDcyNWdv" class="block">
-                    <img src="/Assets/Pictures/Asset 2@4x.png" class="rounded shadow-lg w-[1200px]" alt="Estudo">
-                </a>
-            </div>
-            <div class="relative z-40 -ml-5">
-                <a href="https://www.instagram.com/ceapesetelagoas?igsh=bzRwcHUwdDcyNWdv" class="block">
-                    <img src="/Assets/Pictures/Asset 1@4x.png" class="rounded shadow-lg" alt="Aperfeiçoamento">
-                </a>
+        <div class="md:w-1/2 w-full">
+            <div class="carousel-3d-container">
+                <div class="carousel-3d">
+                    <div class="carousel-3d-track">
+
+                        <div class="carousel-3d-slide active">
+                            <a href="https://www.instagram.com/ceapesetelagoas?igsh=bzRwcHUwdDcyNWdv"
+                                class="block h-full">
+                                <img src="./Assets/Pictures/Asset 3@4x.png" class="rounded shadow-lg" alt="Estrutura">
+                            </a>
+                        </div>
+
+                        <div class="carousel-3d-slide">
+                            <a href="https://www.instagram.com/ceapesetelagoas?igsh=bzRwcHUwdDcyNWdv"
+                                class="block h-full">
+                                <img src="./Assets/Pictures/Asset 2@4x.png" class="rounded shadow-lg" alt="Estudo">
+                            </a>
+                        </div>
+
+                        <div class="carousel-3d-slide">
+                            <a href="https://www.instagram.com/ceapesetelagoas?igsh=bzRwcHUwdDcyNWdv"
+                                class="block h-full">
+                                <img src="./Assets/Pictures/Asset 1@4x.png" class="rounded shadow-lg"
+                                    alt="Aperfeiçoamento">
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <button class="carousel-nav-btn prev-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button class="carousel-nav-btn next-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
             </div>
         </div>
 
@@ -165,6 +199,8 @@
             </a>
         </div>
     </footer>
+
+    <script src="Assets/main.js" defer></script>
 
 </body>
 
