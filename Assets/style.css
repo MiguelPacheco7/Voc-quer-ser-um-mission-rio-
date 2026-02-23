@@ -167,3 +167,13 @@ html, body {
         transform: translateX(45%) translateZ(-100px) rotateY(-10deg);
     }
 }
+
+/* === Ajuste do Carrossel para PC === */
+@media (min-width: 768px) {
+    .carousel-3d-container {
+        max-width: 500px; /* Deixa o carrossel mais largo no PC */
+    }
+    .carousel-3d {
+        height: 500px; /* Aumenta a altura para acompanhar a proporção */
+    }
+}
