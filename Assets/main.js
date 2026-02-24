@@ -1,6 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log("Script carregado com sucesso!"); // Verifique se isso aparece no console (F12)
 
+    // Define o ano atual no rodapé
+    const yearSpan = document.getElementById('currentYear');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+
     /* =========================================
        1. CONFIGURAÇÃO DO SCROLL SUAVE (LENIS)
        ========================================= */
